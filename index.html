@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LNI Ferrara — Corsi di vela · Estate 2026</title>
+<meta name="description" content="Corsi di vela Tridente, Optimist e Altura. Uscite in barca sul mare di Lido di Spina. Lega Navale Italiana, Sezione di Ferrara.">
+
+<!-- ============================================================
+     CARICABILE COSÌ COM'È
+     ------------------------------------------------------------
+     1. Modifica liberamente testo, prezzi, foto (blocco COURSES in fondo).
+     2. Carica questa cartella ("index.html" + "assets/") sul tuo hosting.
+     3. Le foto restano in /assets/photos/ accanto a questo file.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+
+<style>
+:root {
+  --blu-50:#ecf1f8; --blu-100:#cfdcec; --blu-700:#133858; --blu-800:#0e2a44; --blu-900:#091d30;
+  --mare-600:#106195; --mare-700:#0d4f7a;
+  --cielo-100:#ddf1fa; --cielo-200:#bbe3f4;
+  --sabbia-100:#f8f0dc;
+  --oro-100:#ffeead; --oro-300:#f6cf42; --oro-400:#f0bd1a; --oro-500:#d8a40b; --oro-700:#8a6306;
+  --tricolore-verde:#1a8946; --tricolore-rosso:#c8202b; --tricolore-rosso-soft:#f7e1e2;
+  --shell:#fbf9f4; --bianco:#ffffff;
+  --grigio-50:#f5f3ed; --grigio-100:#ebe7dc; --grigio-200:#d8d2c4;
+  --grigio-300:#b8b0a2; --grigio-400:#8e877c; --grigio-500:#68625a;
+  --grigio-600:#494640; --grigio-700:#32302c; --grigio-800:#1f1e1b;
+  --positivo:#2f9e6f; --positivo-soft:#e4f4ec;
+  --brand:var(--blu-700); --brand-strong:var(--blu-800); --brand-soft:var(--blu-50);
+  --primario:var(--mare-600); --accento:var(--oro-300);
+  --text-strong:var(--blu-900); --text-body:var(--grigio-700);
+  --text-muted:var(--grigio-500); --text-faint:var(--grigio-400);
+  --text-on-accent:var(--blu-900);
+  --surface-page:var(--shell); --surface-card:var(--bianco);
+  --line:var(--grigio-200); --line-strong:var(--grigio-300); --line-onsea:rgba(255,255,255,.22);
+  --font-display:'Archivo','Hanken Grotesk',system-ui,sans-serif;
+  --font-body:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --font-mono:'Spline Sans Mono',ui-monospace,'SFMono-Regular',monospace;
+  --radius-sm:10px; --radius-md:14px; --radius-lg:20px; --radius-xl:28px; --radius-pill:999px;
+  --shadow-xs:0 1px 2px rgba(13,56,88,.08);
+  --shadow-sm:0 2px 6px rgba(13,56,88,.08),0 1px 2px rgba(13,56,88,.06);
+  --shadow-md:0 6px 18px rgba(13,56,88,.10),0 2px 6px rgba(13,56,88,.06);
+  --shadow-lg:0 16px 40px rgba(13,56,88,.14),0 4px 12px rgba(13,56,88,.08);
+  --shadow-oro:0 10px 30px rgba(240,189,26,.28);
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.55;color:var(--text-body);background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--text-strong);line-height:1.15;letter-spacing:-.02em;margin:0 0 .4em;font-weight:700}
+a{color:var(--mare-600);text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit}
+
+.poster-line{font-family:var(--font-display);font-weight:900;letter-spacing:-.04em;line-height:.95;margin:0;color:#fff}
+.poster-line em{font-style:italic;color:var(--accento);font-weight:900}
+.overline{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--text-muted)}
+.wave-rule{height:8px;width:56px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='8' viewBox='0 0 56 8'%3E%3Cpath d='M0 4 Q7 0 14 4 T28 4 T42 4 T56 4' fill='none' stroke='%23f6cf42' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:30;background:rgba(251,249,244,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header__inner{max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand-lockup{display:flex;align-items:center;gap:16px;text-decoration:none}
+.brand-lockup img.lni{height:54px;width:auto}
+.brand-lockup img.fiv{height:54px;width:auto;object-fit:contain}
+.brand-lockup .divider{width:1px;height:42px;background:var(--line)}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{font-size:15px;font-weight:600;color:var(--text-body)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:var(--radius-pill);font-weight:700;text-decoration:none;font-family:var(--font-body);border:none;transition:transform .13s ease,box-shadow .22s ease}
+.btn--accent{background:var(--accento);color:var(--text-on-accent);box-shadow:var(--shadow-oro);padding:11px 20px;font-size:14px;font-weight:800}
+.btn--accent:hover{transform:translateY(-1px)}
+.btn--accent-lg{padding:15px 28px;font-size:16px}
+.btn--ghost{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.32);color:#fff;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:15px 28px;font-size:16px;font-weight:600}
+.btn--outline{background:transparent;border:1.5px solid var(--brand);color:var(--brand);padding:13px 22px;font-size:14.5px}
+
+/* Hero */
+.hero{position:relative;min-height:760px;overflow:hidden;display:flex;align-items:stretch}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,48,.18) 0%,rgba(9,29,48,.05) 42%,rgba(9,29,48,.78) 100%);z-index:1}
+.hero__inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:96px 28px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+.hero__top{display:flex;flex-direction:column;gap:30px;max-width:960px}
+.hero__kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:500}
+.hero__poster{font-size:clamp(46px,8.4vw,104px);white-space:nowrap}
+.hero__lead{max-width:560px;font-size:21px;font-weight:500;color:rgba(255,255,255,.94);margin:0;line-height:1.4}
+.hero__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.hero__meta{display:flex;gap:36px;flex-wrap:wrap;font-family:var(--font-mono);font-size:13px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.92);margin-top:72px}
+.hero__meta span,.hero__meta a{display:inline-flex;align-items:center;gap:10px;color:rgba(255,255,255,.92);text-decoration:none}
+.hero__meta i{color:var(--accento);font-size:18px}
+
+/* Sections */
+.section{padding:96px 28px}
+.section--page{background:var(--surface-page)}
+.section__container{max-width:1280px;margin:0 auto}
+.section__head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:48px;flex-wrap:wrap}
+.section__head h2{font-family:var(--font-display);font-weight:900;font-size:56px;letter-spacing:-.038em;line-height:.98;margin:0 0 16px}
+.section__lead{font-size:18px;color:var(--text-body);margin:0;max-width:620px;line-height:1.55}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.card{background:var(--surface-card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:transform .22s cubic-bezier(.22,.61,.36,1),box-shadow .22s cubic-bezier(.22,.61,.36,1);outline:none}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card:focus-visible{box-shadow:0 0 0 3px rgba(47,147,203,.40),var(--shadow-md)}
+.card__media{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,var(--blu-700),var(--blu-900))}
+.card__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card__placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;color:rgba(255,255,255,.55)}
+.card__placeholder i{font-size:46px}
+.card__placeholder span{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.card__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,48,0) 32%,rgba(9,29,48,.62) 100%)}
+.card__code{position:absolute;top:14px;left:14px;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--accento);color:var(--text-on-accent);padding:5px 11px;border-radius:var(--radius-pill);font-weight:700;z-index:1}
+.card__title{position:absolute;left:18px;right:18px;bottom:16px;font-family:var(--font-display);font-weight:900;font-size:26px;letter-spacing:-.028em;line-height:1.05;color:#fff;margin:0;z-index:1}
+.card__body{padding:22px;display:flex;flex-direction:column;gap:14px;flex:1}
+.card__summary{font-size:14.5px;color:var(--text-muted);margin:0;line-height:1.55;flex:1}
+.card__facts{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
+.card__facts li{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text-body)}
+.card__facts i{color:var(--primario);font-size:16px}
+.card__foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px;padding-top:16px;border-top:1px solid var(--line)}
+.card__price{display:flex;flex-direction:column}
+.card__price-unit{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)}
+.card__price-val{font-family:var(--font-mono);font-weight:600;font-size:26px;color:var(--text-strong);letter-spacing:-.01em;line-height:1.1}
+.card__cta{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--primario)}
+
+/* Orari (months + histogram) */
+.orari{padding:80px 28px;background:var(--blu-800);position:relative;overflow:hidden;color:#fff}
+.orari__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;z-index:0}
+.orari__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,42,68,.86),rgba(9,29,48,.96));z-index:1}
+.orari__inner{position:relative;z-index:2;max-width:1280px;margin:0 auto}
+.orari__top{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:start}
+.orari h2{font-family:var(--font-display);font-weight:900;font-size:46px;letter-spacing:-.035em;line-height:1;margin:14px 0 16px;color:#fff}
+.orari__kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accento);font-weight:500}
+.orari__hourpill{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-pill);padding:11px 20px}
+.orari__hourpill i{color:var(--accento);font-size:18px}
+.orari__hourpill span{font-family:var(--font-mono);font-weight:600;font-size:15px;color:#fff;letter-spacing:-.01em}
+.months{display:flex;flex-direction:column;gap:14px}
+.month{display:flex;align-items:center;justify-content:space-between;gap:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-lg);padding:20px 24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.month__name{font-family:var(--font-display);font-weight:800;font-size:24px;letter-spacing:-.02em;color:#fff;display:block}
+.month__days{font-family:var(--font-mono);font-size:11px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.6);display:block;margin-top:3px}
+.month__status{font-family:var(--font-mono);font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:7px 14px;border-radius:var(--radius-pill);white-space:nowrap}
+.month__status--wk{color:var(--accento);background:rgba(246,207,66,.14);border:1px solid rgba(246,207,66,.35)}
+.month__status--all{color:#7fe3b0;background:rgba(47,158,111,.20);border:1px solid rgba(127,227,176,.40)}
+.histo{margin-top:40px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-xl);padding:30px 32px 26px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.histo__head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+.histo__kicker{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.histo__kicker i{color:var(--accento);font-size:20px}
+.histo__kicker span{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accento);font-weight:500}
+.histo__head h3{font-family:var(--font-display);font-weight:800;font-size:24px;letter-spacing:-.02em;margin:0;color:#fff}
+.histo__note{font-size:14.5px;color:rgba(255,255,255,.78);margin:0;max-width:380px;line-height:1.5;text-align:right}
+.histo__bars{display:flex;align-items:flex-end;gap:10px;height:170px}
+.histo__bar{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end}
+.histo__bar .pct{font-family:var(--font-mono);font-size:12px;font-weight:600}
+.histo__bar .fill{width:100%;border-radius:8px 8px 4px 4px;transform-origin:bottom;animation:grow .6s cubic-bezier(.22,.61,.36,1) both}
+.histo__bar .day{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.histo__bar--wk .pct,.histo__bar--wk .day{color:var(--accento)}
+.histo__bar--wk .fill{background:var(--accento)}
+.histo__bar--wd .pct,.histo__bar--wd .day{color:rgba(255,255,255,.7)}
+.histo__bar--wd .fill{background:rgba(255,255,255,.28)}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+/* Tessere */
+.section--tessere{background:var(--shell)}
+.tessere-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.tessera{background:var(--surface-card);border:1px solid var(--line);border-radius:var(--radius-xl);padding:32px;box-shadow:var(--shadow-sm)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;padding:5px 11px;border-radius:var(--radius-pill)}
+.tag--required{background:var(--tricolore-rosso-soft);color:var(--tricolore-rosso)}
+.tag--optional{background:var(--brand-soft);color:var(--brand-strong)}
+.tessera h3{font-family:var(--font-display);font-weight:800;font-size:24px;letter-spacing:-.02em;margin:0 0 8px}
+.tessera-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.tessera-row .label{font-weight:600;color:var(--text-strong);font-size:15px;display:block}
+.tessera-row .who{color:var(--text-muted);font-size:13px;display:block}
+.tessera-row .price{font-family:var(--font-mono);font-weight:600;font-size:20px;color:var(--text-strong)}
+
+/* Contatti */
+.contatti{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start;max-width:1280px;margin:0 auto}
+.contatti h2{font-family:var(--font-display);font-weight:900;font-size:46px;letter-spacing:-.035em;line-height:1;margin:0 0 16px}
+.contatti__direct{display:flex;flex-direction:column;gap:16px}
+.contatti__direct a.big{display:inline-flex;align-items:center;gap:12px;font-size:16px;color:var(--text-strong);font-weight:600}
+.contatti__direct a.big i{color:var(--primario);font-size:22px}
+.contatti__social{display:flex;gap:18px;margin-top:4px}
+.contatti__social a{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--text-body)}
+.contatti__social i{color:var(--primario);font-size:20px}
+.form{background:var(--surface-card);border:1px solid var(--line);border-radius:var(--radius-xl);padding:32px;box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:18px}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field span{font-family:var(--font-mono);font-size:11px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted);font-weight:500}
+.field input,.field select,.field textarea{font-size:15px;padding:13px 15px;border:1px solid var(--line-strong);border-radius:var(--radius-md);background:var(--surface-page);color:var(--text-strong);outline:none}
+.field textarea{resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--primario);box-shadow:0 0 0 3px rgba(47,147,203,.20)}
+.form__foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:4px}
+.form__note{font-size:12.5px;color:var(--text-faint);max-width:300px;line-height:1.45}
+.form__submit{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:var(--radius-pill);background:var(--accento);color:var(--text-on-accent);font-weight:800;font-size:15px;border:none;cursor:pointer;box-shadow:var(--shadow-oro)}
+
+/* Footer */
+.footer{background:var(--blu-900);color:#fff;padding:72px 28px 28px;position:relative;overflow:hidden}
+.footer__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18;z-index:0}
+.footer__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,48,.75),rgba(9,29,48,.95));z-index:1}
+.footer__inner{position:relative;z-index:2;max-width:1280px;margin:0 auto}
+.footer__cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px}
+.footer__col-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accento);margin-bottom:18px;font-weight:500}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.15);padding:22px 0 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:rgba(255,255,255,.55)}
+.footer a{color:#fff}
+.footer__contact{display:flex;flex-direction:column;gap:14px;font-size:15px}
+.footer__contact a{display:inline-flex;align-items:center;gap:10px}
+.footer__contact i{color:var(--accento);font-size:18px}
+.footer__lockup{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.footer__lockup img.lni{height:58px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+.footer__lockup img.fiv{height:58px;width:auto;object-fit:contain;filter:brightness(1.15)}
+.footer__mailbtn{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:11px 20px;border-radius:var(--radius-pill);background:var(--accento);color:var(--text-on-accent)!important;font-weight:700;font-size:14px;width:fit-content}
+
+/* Dialog */
+.dialog{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center}
+.dialog[hidden]{display:none}
+.dialog__scrim{position:absolute;inset:0;background:rgba(9,29,48,.62);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);cursor:pointer;animation:fadeIn .22s ease-out}
+.dialog__panel{position:relative;width:100%;max-width:980px;max-height:92vh;overflow-y:auto;background:var(--surface-card);border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.4);animation:slideUp .35s cubic-bezier(.22,.61,.36,1)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.dialog__hero{position:relative;height:280px;overflow:hidden;background:linear-gradient(135deg,var(--blu-700),var(--blu-900))}
+.dialog__hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dialog__hero .ph-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:rgba(255,255,255,.5)}
+.dialog__hero .ph-placeholder i{font-size:56px}
+.dialog__hero .ph-placeholder span{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.dialog__hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,48,.30) 30%,rgba(9,29,48,.85) 100%)}
+.dialog__close{position:absolute;top:18px;right:18px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);color:#fff;font-size:20px;display:inline-flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:2}
+.dialog__head{position:absolute;left:32px;right:32px;bottom:24px;color:#fff;z-index:1}
+.dialog__head h2{font-family:var(--font-display);font-weight:900;font-size:46px;letter-spacing:-.035em;line-height:1;margin:0;color:#fff}
+.dialog__head .tagline{margin:10px 0 0;font-family:var(--font-display);font-weight:700;font-style:italic;font-size:18px;color:var(--accento)}
+.dialog__facts{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface-page);border-bottom:1px solid var(--line)}
+.dialog__fact{padding:20px 24px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.dialog__fact:last-child{border-right:none}
+.dialog__fact .k{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+.dialog__fact .v{font-weight:700;font-size:16px;color:var(--text-strong)}
+.dialog__fact .v--money{font-family:var(--font-mono);font-weight:600;font-size:22px}
+.dialog__body{padding:36px 32px 8px;display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+.dialog__body h3{font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-.01em;margin:0 0 14px;color:var(--text-strong);display:flex;align-items:center;gap:8px}
+.dialog__body h3 i{color:var(--primario)}
+.dialog__body p{font-size:17px;line-height:1.6;color:var(--text-body);margin:0 0 28px}
+.dialog__list{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:10px}
+.dialog__list li{display:flex;gap:10px;font-size:14.5px;line-height:1.55;color:var(--text-body)}
+.dialog__list li i{color:var(--positivo);font-size:18px;margin-top:1px}
+.dialog__aside-card{background:var(--surface-page);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;margin-bottom:18px}
+.dialog__aside-card h3{font-size:16px}
+.dialog__aside-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.dialog__aside-list li{display:flex;gap:9px;font-size:13.5px;line-height:1.5;color:var(--text-body)}
+.dialog__aside-list li i{color:var(--text-faint);font-size:8px;margin-top:7px}
+.dialog__warning{background:var(--tricolore-rosso-soft);border-radius:var(--radius-lg);padding:18px 22px}
+.dialog__warning-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.dialog__warning-head i{color:var(--tricolore-rosso);font-size:18px}
+.dialog__warning-head span{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--tricolore-rosso)}
+.dialog__warning p{margin:0;font-size:13.5px;line-height:1.5;color:var(--blu-900)}
+.dialog__foot{padding:24px 32px 32px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;background:var(--surface-page);flex-wrap:wrap}
+.dialog__foot-msg{display:flex;flex-direction:column;gap:2px}
+.dialog__foot-msg .k{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+.dialog__foot-msg .v{font-weight:600;font-size:15px;color:var(--text-strong)}
+.dialog__foot-cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Responsive */
+@media (max-width:980px){
+  .nav{display:none}
+  .hero__poster{font-size:74px}
+  .section__head h2{font-size:42px}
+  .hero{min-height:620px}
+  .orari__top{grid-template-columns:1fr}
+  .tessere-grid{grid-template-columns:1fr}
+  .contatti{grid-template-columns:1fr;gap:36px}
+  .footer__cols{grid-template-columns:1fr;gap:36px}
+  .dialog__body{grid-template-columns:1fr;gap:24px}
+  .dialog__facts{grid-template-columns:1fr 1fr}
+  .dialog__facts .dialog__fact{border-bottom:1px solid var(--line)}
+  .dialog__facts .dialog__fact:nth-child(2){border-right:none}
+}
+@media (max-width:600px){
+  .hero__poster{white-space:normal;font-size:46px}
+}
+@media (max-width:560px){
+  .section{padding:64px 22px}
+  .hero__inner{padding:64px 22px}
+  .section__head h2{font-size:34px}
+  .orari h2{font-size:32px}
+  .contatti h2{font-size:32px}
+  .form__row{grid-template-columns:1fr}
+  .dialog__head h2{font-size:32px}
+  .dialog__head{left:22px;right:22px}
+  .dialog__body{padding:28px 22px 0}
+  .dialog__foot{padding:22px}
+  .footer{padding:56px 22px 22px}
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY MASTHEAD -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand-lockup" href="#top" aria-label="LNI Ferrara — home">
+      <img class="lni" src="assets/lni-120-anniversario.png" alt="Lega Navale Italiana — 125° anniversario">
+      <span class="divider"></span>
+      <img class="fiv" src="assets/fiv-logo.png" alt="Federazione Italiana Vela">
+    </a>
+    <nav class="nav">
+      <a href="#corsi">Corsi</a>
+      <a href="#orari">Orari</a>
+      <a href="#tessere">Tessere</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <a class="btn btn--accent" href="#contatti">
+      <i class="ph-fill ph-paper-plane-tilt"></i> Iscriviti adesso
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <img class="hero__bg" src="assets/photos/flotta-aperto.jpg" alt="Vela a Lido di Spina">
+  <div class="hero__scrim"></div>
+  <div class="hero__inner">
+    <div class="hero__top">
+      <span class="hero__kicker">LNI Ferrara · Estate 2026 · affiliata FIV</span>
+      <h1 class="poster-line hero__poster">Naviga. <em>Sul serio.</em></h1>
+      <p class="hero__lead">Corsi Tridente, Optimist e Altura. Uscite in barca a vela sul mare di Lido di Spina.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent btn--accent-lg" href="#corsi">Vedi tutti i corsi <i class="ph ph-arrow-down"></i></a>
+        <a class="btn btn--ghost" href="tel:+393392552863"><i class="ph ph-phone"></i> +39 339 255 2863 · Emanuele</a>
+      </div>
+    </div>
+    <div class="hero__meta">
+      <span><i class="ph-fill ph-map-pin"></i> Bagno Piramidi · Lido di Spina (FE)</span>
+      <a href="https://www.instagram.com/lni_ferrara/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i> @lni_ferrara</a>
+      <a href="https://www.facebook.com/LegaNavaleItaliana.Ferrara/" target="_blank" rel="noopener"><i class="ph ph-facebook-logo"></i> LNI Ferrara</a>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="section section--page" id="corsi">
+  <div class="section__container">
+    <div class="section__head">
+      <div style="max-width:780px">
+        <span class="overline">Programma estivo · 2026</span>
+        <div class="wave-rule" style="margin:14px 0 18px"></div>
+        <h2>Scegli il tuo corso.</h2>
+        <p class="section__lead">Cinque programmi, dal primo bordeggio all'altura. Clicca un corso per orari, prezzi, materiale incluso e cosa portare a bordo.</p>
+      </div>
+      <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);text-align:right">Cinque corsi<br>Tutti i livelli</div>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<!-- ORARI -->
+<section class="orari" id="orari">
+  <img class="orari__bg" src="assets/photos/vela-controluce.jpg" alt="">
+  <div class="orari__scrim"></div>
+  <div class="orari__inner">
+    <div class="orari__top">
+      <div>
+        <span class="orari__kicker">Calendario stagione</span>
+        <h2>Quando siamo<br>in acqua.</h2>
+        <p style="color:rgba(255,255,255,.80);font-size:17px;margin:0 0 22px;line-height:1.55;max-width:460px">A giugno e luglio apriamo nei fine settimana. Ad agosto ci trovi tutti i giorni. Orario di giornata mattina e pomeriggio.</p>
+        <div class="orari__hourpill"><i class="ph ph-clock"></i><span>09:00–12:00 · 14:00–17:00</span></div>
+      </div>
+      <div class="months">
+        <div class="month">
+          <div><span class="month__name">Giugno</span><span class="month__days">Sabato &amp; Domenica</span></div>
+          <span class="month__status month__status--wk">Solo weekend</span>
+        </div>
+        <div class="month">
+          <div><span class="month__name">Luglio</span><span class="month__days">Sabato &amp; Domenica</span></div>
+          <span class="month__status month__status--wk">Solo weekend</span>
+        </div>
+        <div class="month">
+          <div><span class="month__name">Agosto</span><span class="month__days">Tutti i giorni</span></div>
+          <span class="month__status month__status--all">Aperti sempre</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="histo">
+      <div class="histo__head">
+        <div>
+          <div class="histo__kicker"><i class="ph-fill ph-chart-bar"></i><span>Affluenza tipica</span></div>
+          <h3>I weekend si riempiono in fretta.</h3>
+        </div>
+        <p class="histo__note">Sabato e domenica i posti volano via. Prenota in anticipo per non restare a terra.</p>
+      </div>
+      <div class="histo__bars" id="histo"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESSERE -->
+<section class="section section--tessere" id="tessere">
+  <div class="section__container">
+    <div class="section__head">
+      <div style="max-width:720px">
+        <span class="overline">Prima di salire a bordo</span>
+        <div class="wave-rule" style="margin:14px 0 18px"></div>
+        <h2 style="font-size:46px">Le tessere.</h2>
+        <p style="font-size:17px;color:var(--text-body);margin:0;line-height:1.55">La tessera LNI Ferrara è obbligatoria per qualsiasi corso o uscita: ti rende socio della sezione di Ferrara. La tessera FIV è su richiesta, per chi vuole tesserarsi anche con la federazione.</p>
+      </div>
+      <img src="assets/lni-120-anniversario.png" alt="Lega Navale Italiana" style="height:96px;width:auto">
+    </div>
+    <div class="tessere-grid">
+      <div class="tessera">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+          <span class="tag tag--required"><i class="ph-fill ph-check-circle"></i> Obbligatoria</span>
+          <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">LNI · Sezione di Ferrara</span>
+        </div>
+        <h3>Tessera LNI Ferrara</h3>
+        <p style="margin:0 0 22px;color:var(--text-muted);font-size:14.5px;line-height:1.55">Necessaria per partecipare. Ti rende socio della sezione, con accesso alla flotta e agli eventi soci.</p>
+        <div class="tessera-row"><div><span class="label">Tessera LNI U18</span><span class="who">Soci under 18 della sezione di Ferrara</span></div><span class="price">20 €</span></div>
+        <div class="tessera-row"><div><span class="label">Tessera LNI +18</span><span class="who">Soci dai 18 ai 25 anni</span></div><span class="price">45 €</span></div>
+        <div class="tessera-row"><div><span class="label">Tessera LNI +25</span><span class="who">Soci dai 25 anni in su</span></div><span class="price">60 €</span></div>
+      </div>
+      <div class="tessera">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+          <span class="tag tag--optional"><i class="ph-fill ph-anchor-simple"></i> Su richiesta</span>
+          <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:.10em;text-transform:uppercase;color:var(--text-muted)">FIV · Federazione</span>
+        </div>
+        <h3>Tessera FIV</h3>
+        <p style="margin:0 0 22px;color:var(--text-muted);font-size:14.5px;line-height:1.55">Facoltativa: per chi vuole tesserarsi anche con la Federazione Italiana Vela. Chiedici come.</p>
+        <div class="tessera-row"><div><span class="label">Tessera FIV +18</span><span class="who">Maggiorenni — su richiesta</span></div><span class="price">25 €</span></div>
+        <div class="tessera-row"><div><span class="label">Tessera FIV U18</span><span class="who">Under 18 — su richiesta</span></div><span class="price">20 €</span></div>
+        <div class="tessera-row"><div><span class="label">Tessera FIV parasailing</span><span class="who">Specifica per il corso parasailing</span></div><span class="price">20 €</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="section section--page" id="contatti">
+  <div class="contatti">
+    <div>
+      <span class="overline">Prenota il tuo posto</span>
+      <div class="wave-rule" style="margin:14px 0 18px"></div>
+      <h2>Scrivici, il mare<br>ti aspetta.</h2>
+      <p style="font-size:17px;color:var(--text-body);margin:0 0 28px;line-height:1.55;max-width:440px">Compila il modulo: ti risponderemo entro 24 ore con le prossime date disponibili. Preferisci sentirci subito? Chiama o scrivici direttamente.</p>
+      <div class="contatti__direct">
+        <a class="big" href="mailto:corsi.lniferrara@gmail.com"><i class="ph ph-envelope-simple"></i> corsi.lniferrara@gmail.com</a>
+        <a class="big" href="tel:+393392552863"><i class="ph ph-phone"></i> +39 339 255 2863 · Emanuele</a>
+        <div class="contatti__social">
+          <a href="https://www.instagram.com/lni_ferrara/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i> @lni_ferrara</a>
+          <a href="https://www.facebook.com/LegaNavaleItaliana.Ferrara/" target="_blank" rel="noopener"><i class="ph ph-facebook-logo"></i> LNI Ferrara</a>
+        </div>
+      </div>
+    </div>
+    <form class="form" id="contact-form">
+      <div class="form__row">
+        <label class="field"><span>Nome e cognome</span><input name="nome" type="text" required placeholder="Mario Rossi"></label>
+        <label class="field"><span>Telefono</span><input name="telefono" type="tel" placeholder="+39 333 1234567"></label>
+      </div>
+      <label class="field"><span>Email</span><input name="email" type="email" required placeholder="mario.rossi@email.it"></label>
+      <div class="form__row">
+        <label class="field"><span>Corso d'interesse</span>
+          <select name="corso" id="corso-select"><option value="">Scegli un corso…</option></select>
+        </label>
+        <label class="field"><span>Periodo preferito</span><input name="periodo" type="text" placeholder="es. seconda metà di luglio"></label>
+      </div>
+      <label class="field"><span>Messaggio</span><textarea name="messaggio" rows="4" placeholder="Raccontaci chi parteciperà, l'età, l'esperienza…"></textarea></label>
+      <div class="form__foot">
+        <span class="form__note">Inviando, si apre la tua app di posta con il messaggio già pronto per noi.</span>
+        <button type="submit" class="form__submit"><i class="ph-fill ph-paper-plane-tilt"></i> Invia richiesta</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="dove">
+  <img class="footer__bg" src="assets/photos/tramonto.jpg" alt="">
+  <div class="footer__scrim"></div>
+  <div class="footer__inner">
+    <div class="footer__cols">
+      <div>
+        <div class="footer__lockup">
+          <img class="lni" src="assets/lni-120-anniversario.png" alt="">
+          <img class="fiv" src="assets/fiv-logo.png" alt="">
+        </div>
+        <p class="poster-line" style="font-size:42px;line-height:1;margin:0 0 18px">Naviga. <em>Sul serio.</em></p>
+        <p style="color:rgba(255,255,255,.75);font-size:15px;margin:0;max-width:380px;line-height:1.55">Lega Navale Italiana — Sezione di Ferrara. Sport, formazione e cultura del mare dal 1897.</p>
+      </div>
+      <div>
+        <div class="footer__col-label">Dove siamo</div>
+        <div style="font-size:15.5px;line-height:1.65;color:rgba(255,255,255,.92)">
+          <div style="font-weight:700;margin-bottom:4px">Bagno Piramidi</div>
+          <div>Lido di Spina (FE)</div>
+          <div style="color:rgba(255,255,255,.6);font-size:13.5px;margin-top:10px">Spiaggia attrezzata · Pontile dedicato · Rimessaggio in loco</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-label">Per info &amp; prenotazioni</div>
+        <div class="footer__contact">
+          <a href="mailto:corsi.lniferrara@gmail.com"><i class="ph ph-envelope-simple"></i> corsi.lniferrara@gmail.com</a>
+          <a href="tel:+393392552863"><i class="ph ph-phone"></i> +39 339 255 2863 · Emanuele</a>
+          <a href="https://www.instagram.com/lni_ferrara/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo"></i> @lni_ferrara</a>
+          <a href="https://www.facebook.com/LegaNavaleItaliana.Ferrara/" target="_blank" rel="noopener"><i class="ph ph-facebook-logo"></i> LNI Ferrara</a>
+          <a class="footer__mailbtn" href="mailto:corsi.lniferrara@gmail.com"><i class="ph-fill ph-paper-plane-tilt"></i> Scrivici una mail</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Lega Navale Italiana · Sezione di Ferrara · Affiliata FIV</span>
+      <span style="font-family:var(--font-mono);letter-spacing:.08em">Privacy · Cookie · Termini</span>
+    </div>
+  </div>
+</footer>
+
+<!-- COURSE DETAIL DIALOG -->
+<div id="dialog" class="dialog" role="dialog" aria-modal="true" aria-label="Dettagli corso" hidden>
+  <div class="dialog__scrim" data-close></div>
+  <div class="dialog__panel" role="document">
+    <div class="dialog__hero">
+      <img id="d-img" src="" alt="">
+      <div class="ph-placeholder" id="d-ph" hidden><i class="ph ph-sailboat"></i><span>Foto in arrivo</span></div>
+      <button class="dialog__close" data-close aria-label="Chiudi"><i class="ph ph-x"></i></button>
+      <div class="dialog__head">
+        <span id="d-code" class="card__code" style="position:static;display:inline-block;margin-bottom:14px"></span>
+        <h2 id="d-title"></h2>
+        <p id="d-tagline" class="tagline"></p>
+      </div>
+    </div>
+    <div class="dialog__facts">
+      <div class="dialog__fact"><span class="k">Prezzo</span><span id="d-price" class="v v--money"></span></div>
+      <div class="dialog__fact"><span class="k">Durata</span><span id="d-duration" class="v"></span></div>
+      <div class="dialog__fact"><span class="k">Schema</span><span id="d-schedule" class="v"></span></div>
+      <div class="dialog__fact"><span class="k">Per chi</span><span id="d-age" class="v"></span></div>
+    </div>
+    <div class="dialog__body">
+      <div>
+        <p id="d-summary"></p>
+        <h3><i class="ph ph-sailboat"></i> Cosa imparerai</h3>
+        <ul id="d-details" class="dialog__list"></ul>
+        <h3><i class="ph ph-gift"></i> Cosa è incluso</h3>
+        <ul id="d-includes" class="dialog__list"></ul>
+      </div>
+      <div>
+        <div class="dialog__aside-card">
+          <h3><i class="ph ph-backpack"></i> Cosa portare</h3>
+          <ul id="d-bring" class="dialog__aside-list"></ul>
+        </div>
+        <div class="dialog__warning">
+          <div class="dialog__warning-head"><i class="ph-fill ph-info"></i><span>Tessera obbligatoria</span></div>
+          <p id="d-required"></p>
+        </div>
+      </div>
+    </div>
+    <div class="dialog__foot">
+      <div class="dialog__foot-msg">
+        <span class="k">Pronto a salire a bordo?</span>
+        <span class="v">Scrivici il corso e il periodo, ti rispondiamo entro 24h.</span>
+      </div>
+      <div class="dialog__foot-cta">
+        <a class="btn btn--outline" href="tel:+393392552863"><i class="ph ph-phone"></i> Chiama Emanuele</a>
+        <a id="d-mailto" class="btn btn--accent btn--accent-lg" href="#" style="font-size:14.5px;padding:13px 24px"><i class="ph-fill ph-paper-plane-tilt"></i> Iscriviti a questo corso</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     DATI + INTERATTIVITÀ — modifica liberamente il blocco COURSES
+     - prezzo numerico in `price` (euro)
+     - unit: 'A corso' oppure "All'ora"
+     - image: '' lascia il riquadro "Foto in arrivo"
+     ============================================================ -->
+<script>
+const COURSES = [
+  {
+    id:'tridente-base', code:'COD. TRI-BASE', title:'Corsi Tridente — Base',
+    image:'assets/photos/tridente-baia.jpg',
+    summary:"Cinque mattine sul Tridente per imparare a leggere il vento, le manovre fondamentali e cominciare a governare la barca da te. Il modo più diretto per cominciare a fare vela sul serio.",
+    price:260, unit:'A corso', duration:'15 ore totali', schedule:'5 giorni da 3 ore', age:'Dai 14 anni in su',
+    tagline:'Ricordi indimenticabili.',
+    details:['Tridente 16 — deriva federale di 5 metri con randa e fiocco','Istruttore qualificato a bordo per tutta la durata','Manovre base: virata, strambata, andature, ormeggio','Teoria essenziale: vento reale e apparente, regole di rotta'],
+    includes:['Tutto il materiale tecnico (giubbotti salvagente, ceratine in caso di vento)','Assicurazione corso e copertura RC'],
+    bring:["Costume da bagno e un cambio asciutto","Scarpe chiuse leggere (vecchie sneaker o scarpe da scoglio)","Cappellino con laccetto, occhiali con cordino","Crema solare resistente all'acqua","Felpa o k-way per le mattine ventose"],
+    required:'Tessera LNI Ferrara obbligatoria per partecipare. Tessera FIV su richiesta — vedi la sezione Tessere.'
+  },
+  {
+    id:'tridente-avanzato', code:'COD. TRI-AVAN', title:'Corsi Tridente — Avanzato',
+    image:'assets/photos/flotta-aperto.jpg',
+    summary:"Per chi ha già fatto il base (qui o altrove). Si esce con più vento, si lavora sulle regolazioni, sulle andature al lasco e poppa, e si comincia a portare la barca con sicurezza.",
+    price:225, unit:'A corso', duration:'15 ore totali', schedule:'5 giorni da 3 ore', age:'Dai 14 anni · prerequisito corso base',
+    tagline:'Guida da te la tua barca.',
+    details:['Regolazioni fini: tesatura della randa, posizione equipaggio, bolina stretta','Andature portanti: lasco, gran lasco, fil di ruota e strambate sicure','Lettura del campo: salti di vento, raffiche, scelta delle bordate','Manovre di emergenza: uomo a mare, riduzione di tela'],
+    includes:['Tutto il materiale tecnico','Briefing meteo prima di ogni uscita'],
+    bring:["Stesso kit del corso base — costume, scarpe chiuse, k-way","Eventuali guanti da vela tuoi (consigliati)"],
+    required:'Tessera LNI Ferrara obbligatoria per partecipare. Tessera FIV su richiesta.'
+  },
+  {
+    id:'optimist', code:'COD. OPTI', title:'Corso Optimist',
+    image:'',
+    summary:"Il classico per cominciare da piccoli, da soli in barca. Cinque mattine in acqua, due istruttori a seguire il gruppo dal gommone. Per ragazzi dai 6 ai 14 anni.",
+    price:190, unit:'A corso', duration:'15 ore totali', schedule:'5 giorni da 3 ore', age:'Dai 6 ai 14 anni',
+    tagline:'Lasciali crescere dal mare.',
+    details:['Optimist — deriva singola, la barca con cui crescono i velisti italiani','Due istruttori in gommone d\u2019assistenza','Gruppi piccoli, vento e onde sempre in sicurezza','Primi rudimenti di teoria, nodi e nomenclatura'],
+    includes:['Barca, vela, timone, deriva, giubbotto salvagente','Assistenza ravvicinata in gommone per tutto il corso'],
+    bring:["Costume, asciugamano, cambio completo","Scarpe chiuse leggere, cappellino con laccetto","Crema solare e una merenda per il break"],
+    required:'Tessera LNI Ferrara obbligatoria per partecipare. Tessera FIV su richiesta.'
+  },
+  {
+    id:'altura', code:'COD. ALTURA', title:'Corsi Altura',
+    image:'',
+    summary:"Quattro giornate piene su barca cabinata. Si esce dal porto, si naviga in mare aperto, si dorme a bordo. Per chi vuole imparare a portare una barca vera, anche in equipaggio.",
+    price:450, unit:'A corso', duration:'20 ore totali', schedule:'4 giorni da 5 ore', age:'Maggiorenni · livello intermedio',
+    tagline:'Impara a governare il mare.',
+    details:['Barca cabinata 8–10 metri, equipaggio di max 5 allievi','Navigazione vera: rotta, carteggio essenziale, lettura strumenti','Manovre d\u2019equipaggio: ormeggi, mollare e prendere boa, ancoraggio','Meteorologia operativa: bollettini, scelta della finestra giusta'],
+    includes:['Barca, attrezzatura di bordo, dotazioni di sicurezza','Skipper-istruttore qualificato per tutto il corso'],
+    bring:["Sacca morbida (no trolley rigidi), abbigliamento a strati","Cerata leggera o k-way + felpa pesante","Scarpe da barca a suola chiara, occhiali polarizzati","Tutto in un beauty da viaggio, lo spazio a bordo è poco"],
+    required:'Tessera LNI Ferrara obbligatoria per partecipare. Tessera FIV su richiesta.'
+  },
+  {
+    id:'uscite', code:'COD. USCITE', title:'Uscite in Tridente',
+    image:'assets/photos/tramonto.jpg',
+    summary:"La barca a ore. Da solo, in coppia o fino a 5 persone. Esci appena finito il corso o porta a fare un giro chi vuoi. Possibile skipper a bordo se preferisci farti accompagnare.",
+    price:40, unit:"All'ora", duration:'A partire da 1 ora', schedule:'Fino a 5 persone a bordo', age:'Maggiorenni con corso base completato',
+    tagline:'Cambia la tua prospettiva.',
+    details:['Tridente 16 — la stessa barca dei corsi, ormai conosci','Prenoti la fascia oraria che vuoi (in settimana o nel weekend)',"Skipper su richiesta: 20 €/h, se vuoi farti accompagnare",'Tramonti sul mare aperto: chiedi la fascia 18:00–20:30'],
+    includes:["Barca pronta all\u2019ormeggio, giubbotti, briefing pre-uscita","Assistenza radio dal molo per la durata dell\u2019uscita"],
+    bring:["Quello che servirebbe per una mattinata di mare","Una bottiglia d\u2019acqua e qualcosa da sgranocchiare"],
+    required:"Tessera LNI Ferrara obbligatoria. Skipper su richiesta: 20 € all'ora."
+  }
+];
+
+// Typical busyness by weekday — weekends clearly higher.
+const BUSYNESS = [
+  {day:'Lun',pct:32,weekend:false},{day:'Mar',pct:28,weekend:false},{day:'Mer',pct:40,weekend:false},
+  {day:'Gio',pct:46,weekend:false},{day:'Ven',pct:64,weekend:false},
+  {day:'Sab',pct:96,weekend:true},{day:'Dom',pct:88,weekend:true}
+];
+
+function priceLabel(c){ return c.unit && c.unit.toLowerCase().indexOf('ora')===0 ? (c.price+' €/h') : (c.price+' €'); }
+function el(tag, attrs, ...children){
+  const e=document.createElement(tag);
+  for(const k in attrs){
+    if(k==='class') e.className=attrs[k];
+    else if(k==='html') e.innerHTML=attrs[k];
+    else if(k.startsWith('on')) e.addEventListener(k.slice(2),attrs[k]);
+    else e.setAttribute(k,attrs[k]);
+  }
+  for(const c of children) if(c!=null) e.append(c.nodeType?c:document.createTextNode(c));
+  return e;
+}
+
+// ---- Cards ----
+const cards=document.getElementById('cards');
+COURSES.forEach(c=>{
+  const media = el('div',{class:'card__media'});
+  if(c.image) media.append(el('img',{src:c.image,alt:''}));
+  else media.append(el('div',{class:'card__placeholder'}, el('i',{class:'ph ph-sailboat'}), el('span',{},'Foto in arrivo')));
+  media.append(el('span',{class:'card__code'},c.code), el('h3',{class:'card__title'},c.title));
+
+  const card=el('article',{
+    class:'card', role:'button', tabindex:'0',
+    onclick:()=>openDialog(c),
+    onkeydown:(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openDialog(c); } }
+  },
+    media,
+    el('div',{class:'card__body'},
+      el('p',{class:'card__summary'},c.summary),
+      el('ul',{class:'card__facts'},
+        el('li',{},el('i',{class:'ph ph-clock'}),c.duration),
+        el('li',{},el('i',{class:'ph ph-calendar-blank'}),c.schedule),
+        el('li',{},el('i',{class:'ph ph-users-three'}),c.age)
+      ),
+      el('div',{class:'card__foot'},
+        el('div',{class:'card__price'},
+          el('span',{class:'card__price-unit'},c.unit),
+          el('span',{class:'card__price-val'},priceLabel(c))
+        ),
+        el('span',{class:'card__cta'},'Dettagli ',el('i',{class:'ph ph-arrow-right'}))
+      )
+    )
+  );
+  cards.append(card);
+});
+
+// ---- Histogram ----
+const histo=document.getElementById('histo');
+BUSYNESS.forEach(b=>{
+  histo.append(el('div',{class:'histo__bar '+(b.weekend?'histo__bar--wk':'histo__bar--wd')},
+    el('span',{class:'pct'},b.pct+'%'),
+    el('div',{class:'fill',style:'height:'+b.pct+'%'}),
+    el('span',{class:'day'},b.day)
+  ));
+});
+
+// ---- Course select options ----
+const sel=document.getElementById('corso-select');
+COURSES.forEach(c=> sel.append(el('option',{value:c.title},c.title)));
+
+// ---- Contact form → compose mailto ----
+document.getElementById('contact-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target, v=(n)=> (f.elements[n] && f.elements[n].value ? f.elements[n].value.trim() : '');
+  const corso=v('corso');
+  const subject='Richiesta info — '+(corso||'Corsi LNI Ferrara');
+  const body='Nome: '+v('nome')+'\nEmail: '+v('email')+'\nTelefono: '+v('telefono')+
+    '\nCorso d\u2019interesse: '+corso+'\nPeriodo preferito: '+v('periodo')+'\n\nMessaggio:\n'+v('messaggio')+'\n';
+  window.location.href='mailto:corsi.lniferrara@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
+
+// ---- Dialog ----
+const dialog=document.getElementById('dialog');
+function openDialog(c){
+  const img=document.getElementById('d-img'), ph=document.getElementById('d-ph');
+  if(c.image){ img.src=c.image; img.hidden=false; ph.hidden=true; }
+  else { img.removeAttribute('src'); img.hidden=true; ph.hidden=false; }
+  document.getElementById('d-code').textContent=c.code;
+  document.getElementById('d-title').textContent=c.title;
+  document.getElementById('d-tagline').textContent=c.tagline;
+  document.getElementById('d-price').textContent=priceLabel(c);
+  document.getElementById('d-duration').textContent=c.duration;
+  document.getElementById('d-schedule').textContent=c.schedule;
+  document.getElementById('d-age').textContent=c.age;
+  document.getElementById('d-summary').textContent=c.summary;
+  document.getElementById('d-required').textContent=c.required;
+  const fill=(id,items,iconHtml)=>{ const ul=document.getElementById(id); ul.innerHTML=''; items.forEach(t=>{ const li=document.createElement('li'); li.innerHTML=iconHtml; li.append(document.createTextNode(t)); ul.append(li); }); };
+  fill('d-details',c.details,'<i class="ph ph-check-circle"></i>');
+  fill('d-includes',c.includes,'<i class="ph ph-check-circle"></i>');
+  fill('d-bring',c.bring,'<i class="ph-fill ph-circle"></i>');
+  const subject=encodeURIComponent('Iscrizione: '+c.title);
+  const body=encodeURIComponent('Ciao,\n\nvorrei iscrivermi al corso "'+c.title+'" ('+c.code+').\n\nFatemi sapere le prossime date disponibili.\n\nGrazie!');
+  document.getElementById('d-mailto').href='mailto:corsi.lniferrara@gmail.com?subject='+subject+'&body='+body;
+  dialog.hidden=false; document.body.style.overflow='hidden';
+}
+function closeDialog(){ dialog.hidden=true; document.body.style.overflow=''; }
+dialog.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeDialog));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !dialog.hidden) closeDialog(); });
+</script>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#133858"/>
+    <g transform="translate(20,20)" fill="none" stroke="#f6cf42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 0 L30 50 M10 50 Q10 60 30 62 Q50 60 50 50"/>
+      <line x1="20" y1="14" x2="40" y2="14"/>
+      <circle cx="30" cy="6" r="3" fill="#f6cf42"/>
+    </g>
+  </svg>
+</template>
+</body>
+</html>
